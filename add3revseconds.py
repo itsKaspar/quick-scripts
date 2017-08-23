@@ -15,3 +15,4 @@ while i < 33 :
 	sleep(1)
 	os.system("del rev" + stri + ".mov")
 	sleep(1)
+	i = i +1
