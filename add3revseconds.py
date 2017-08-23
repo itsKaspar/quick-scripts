@@ -14,3 +14,4 @@ while i < 33 :
 	os.system("del 3s" + stri + ".mov")
 	sleep(1)
 	os.system("del rev" + stri + ".mov")
+	sleep(1)
