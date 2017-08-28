@@ -1,0 +1,1 @@
+for /r %f in (*.avi) do echo file '%~nxf' >>%~dpf\concat.txt
