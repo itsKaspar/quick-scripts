@@ -1,0 +1,3 @@
+convert image to still video
+
+ffmpeg -loop 1 -y -i imagefile.jpg -t 10 -c:v libx264 shitworks.mp4
