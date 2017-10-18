@@ -6,10 +6,11 @@ import os
 j = 1
 i = 0
 
-while i < 1343 :
+#make one inputs, cut every, + detect how long the video is
+while i < 5500 :
 	stri = str(i)
 	strj = str(j)
-	os.system("ffmpeg -ss " + stri +  " -i chimere.mov -c copy -an -t 15 " + strj + ".avi")
-	i = i + 15
+	os.system("ffmpeg -ss " + stri +  " -i video.mp4 -t 900 -c:v libx264 " + strj + ".mp4")
+	i = i + 900
 	j = j + 1
-	sleep(1)
+	sleep(2)
