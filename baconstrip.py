@@ -16,4 +16,4 @@ for filename in os.listdir("."):
 for filename in os.listdir("temp"):
 	if os.path.isdir(filename):
 		continue
-	os.system("ffmpeg -i temp/" + filename + " -c:v prores_ks baked/" + os.path.splitext(filename)[0] + ".mov")
+	os.system("ffmpeg -i temp/" + filename + " -c:v libxvid -crf 0 -preset ultrafast baked/" + os.path.splitext(filename)[0] + ".mov")
