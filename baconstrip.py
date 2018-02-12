@@ -11,9 +11,9 @@ if not os.path.exists("temp"):
 for filename in os.listdir("."):
 	if os.path.isdir(filename):
 		continue
-	os.system("mencoder " + filename + " -nosound -o temp/" + os.path.splitext(filename)[0] + ".mov -ovc x264")
+	os.system("mencoder " + filename + " -o temp/" + os.path.splitext(filename)[0] + ".mov -ovc x264 -oac lavc")
 
 for filename in os.listdir("temp"):
 	if os.path.isdir(filename):
 		continue
-	os.system("ffmpeg -i temp/" + filename + " -c:v libxvid -crf 0 -preset ultrafast baked/" + os.path.splitext(filename)[0] + ".mov")
+	os.system("ffmpeg -i temp/" + filename + " -c:v libx264 -crf 0 -preset ultrafast baked/" + os.path.splitext(filename)[0] + ".mov")
