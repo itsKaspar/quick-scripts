@@ -5,7 +5,7 @@ from os.path import basename
 if not os.path.exists("baked"):
 	os.makedirs("baked")
 
-if not os.path.exists("temp"):
+if not os.path.exists("temp"): 
 	os.makedirs("temp")
 
 for filename in os.listdir("."):
