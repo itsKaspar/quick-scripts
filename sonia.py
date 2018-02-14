@@ -6,7 +6,7 @@ import subprocess
 import re
 
 g = 600 # nb of seconds that we strip from beginning and end of movie to avoid credits
-j = 5 # nb of times you wanna go through each movie and cut shit
+j = 50 # nb of cuts you want
 
 if not os.path.exists("results"): 
 	os.makedirs("results")
@@ -23,8 +23,9 @@ while i < j :
 		
   		k = random.randint(g, film_duration-g-180)
 		os.system("ffmpeg -ss " + k +  " -i " + filename + " -t 180 -c:v libx264 results/" + os.path.splitext(filename)[0] + ".mp4")
-
-	i++
+		
+		i += 1
+	
 
 
 
