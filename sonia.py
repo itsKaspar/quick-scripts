@@ -26,9 +26,9 @@ while i < j :
   		k = random.randint(min, max)
 		os.system("ffmpeg -ss " + str(k) +  " -i " + filename + " -t 180 -c:v libx264 results/" + str(i) + ".mp4")
 		
-		print "################################################"
-		print "made cut from " + str(k) + "sec to " + str(k + 180) + "sec " 
-		print "################################################"
+		# print "################################################"
+		# print "made cut from " + str(k) + "sec to " + str(k + 180) + "sec " 
+		# print "################################################"
 		
 		i += 1
 	
