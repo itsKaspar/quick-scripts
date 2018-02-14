@@ -3,7 +3,6 @@
 import os
 import random
 from moviepy.editor import VideoFileClip
-import re
 
 g = 600 # nb of seconds that we strip from beginning and end of movie to avoid credits
 j = 10 # nb of cuts you want
