@@ -9,9 +9,6 @@ g = 600 # nb of seconds that we strip from beginning and end of movie to avoid c
 j = 50 # nb of cuts you want
 i = 0
 
-
-
-
 if not os.path.exists("results"): 
 	os.makedirs("results")
 
