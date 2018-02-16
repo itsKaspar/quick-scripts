@@ -8,8 +8,10 @@ enc = "libx264"	# encoder
 ext = ".mp4"	# extension
 enc_opt = ""	# encoder options
 
-# "-movflags +faststart"  if it is a webvideo and needs to be played by user on browser before it finished downloading
-# "-tune film" // or animation
+## if it is a webvideo and needs to be played by user on browser before it finished downloading
+# -movflags +faststart
+## tuning options // other options : animation
+# -tune film
 
 if not os.path.exists(d): 
 	os.makedirs(d)
