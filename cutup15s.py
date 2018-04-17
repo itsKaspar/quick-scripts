@@ -1,16 +1,17 @@
-#!/bin/python3  
+import os, argparse
+from moviepy.editor import VideoFileClip
 
-from time import sleep
-import os
+parser = argparse.ArgumentParser(add_help=True)
+parser.add_argument("-i", "--input", help="input file")
+args = parser.parse_args()
+filein = args.input
 
-j = 1
-i = 0
+clip = VideoFileClip(filein)
+i = 1
+j = 0
+n = 10
 
-#make one inputs, cut every, + detect how long the video is
-while i < 5500 :
-	stri = str(i)
-	strj = str(j)
-	os.system("ffmpeg -ss " + stri +  " -i video.mp4 -t 900 -c:v libx264 " + strj + ".mp4")
-	i = i + 900
+while i < clip.duration :
+	os.system("ffmpeg -ss " + str(i) +  " -i " + filein +  " -t " + str(n) + "  -c:v libx264 " + str(j) + ".mp4")
+	i = i + n
 	j = j + 1
-	sleep(2)
