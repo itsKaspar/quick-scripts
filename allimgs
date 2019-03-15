@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import argparse, os, re, random, struct
+from itertools import chain
+
+for filename in os.listdir("."):
+	if os.path.isdir(filename) or filename == "rsz.py":
+      		continue
+		
+	os.system("ffmpeg -i " + filename + " -vf scale=1080:-1 rsz_" + filename)
